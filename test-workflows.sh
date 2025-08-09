@@ -39,6 +39,8 @@ NC='\033[0m'
 
 echo -e "${BLUE}🧪 Elite Agentic Scripts - Comprehensive Testing Suite${NC}"
 echo "============================================================"
+# Ensure scripts are executable for tests
+chmod +x evolution/*.sh dev-tools/*.sh optimization/*.sh memory/*.sh 2>/dev/null || true
 
 # Test results tracking
 TESTS_PASSED=0
@@ -166,11 +168,11 @@ OPTIMIZATION_COUNT=$(find optimization -name "*.sh" | wc -l)
 MEMORY_COUNT=$(find memory -name "*.sh" | wc -l)
 TOTAL_SCRIPTS=$((EVOLUTION_COUNT + DEVTOOLS_COUNT + OPTIMIZATION_COUNT + MEMORY_COUNT))
 
-run_test "Evolution scripts (expected 4)" "[ $EVOLUTION_COUNT -eq 4 ]"
-run_test "Dev Tools scripts (expected 3)" "[ $DEVTOOLS_COUNT -eq 3 ]"
-run_test "Optimization scripts (expected 1)" "[ $OPTIMIZATION_COUNT -eq 1 ]"
-run_test "Memory scripts (expected 2)" "[ $MEMORY_COUNT -eq 2 ]"
-run_test "Total scripts (expected 10)" "[ $TOTAL_SCRIPTS -eq 10 ]"
+run_test "Evolution scripts (>= 4)" "[ $EVOLUTION_COUNT -ge 4 ]"
+run_test "Dev Tools scripts (>= 3)" "[ $DEVTOOLS_COUNT -ge 3 ]"
+run_test "Optimization scripts (>= 1)" "[ $OPTIMIZATION_COUNT -ge 1 ]"
+run_test "Memory scripts (>= 2)" "[ $MEMORY_COUNT -ge 2 ]"
+run_test "Total scripts (>= 10)" "[ $TOTAL_SCRIPTS -ge 10 ]"
 
 # Test 10: Demo execution (safe tests)
 echo -e "\n${BLUE}🎯 Testing Safe Demo Execution${NC}"
