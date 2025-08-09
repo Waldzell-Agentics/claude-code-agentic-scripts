@@ -125,6 +125,12 @@ Each script includes:
 - Integration guides for development workflows
 - Troubleshooting and FAQ sections
 
+## ✅ Testing & CI
+
+- Local tests: `make test` (requires `bats`; install via `sudo apt-get install -y bats`)
+- Legacy harness: `bash test-workflows.sh`
+- CI: GitHub Actions workflow `Validate Agentic Flows` runs on every push/PR and executes both the Bats suite and the legacy harness.
+
 ## 🤝 Contributing
 
 This collection represents the elite tier of agentic scripting. Contributions should maintain the high quality standards:

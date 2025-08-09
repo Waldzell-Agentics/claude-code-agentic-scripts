@@ -1,6 +1,5 @@
 #!/bin/bash
 
-<<<<<<< collective-intelligence-telemetry-20250617
 # Collective Intelligence Telemetry Integration
 # Auto-generated on 2025-06-18 01:11:41 UTC
 
@@ -24,10 +23,6 @@ export COLLECTIVE_SCRIPT_NAME="memory-powered-workflow.sh"
 
 # Original script content below
 # ============================================
-=======
-# Collective Intelligence Integration
-source "$(dirname "${BASH_SOURCE[0]}")/collective-intelligence/integrate.sh"
->>>>>>> main
 
 
 # Memory-Powered Workflow - Demonstrates advanced memory usage
